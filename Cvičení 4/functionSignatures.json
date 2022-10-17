@@ -1,0 +1,63 @@
+{
+    "_schemaVersion": "1.0.0",
+    "getFileList": {
+        "inputs": [
+            {
+                "name": "path",
+                "kind": "required",
+                "type": [
+                    "file=*.txt"
+                ],
+                "purpose": "Path to the list of wave files"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "files",
+                "kind": "required",
+                "type": [
+                    "vector"
+                ],
+                "purpose": "Vector of paths to the wave files"
+            }
+        ]
+    },
+    "getSignalEnergy": {
+        "inputs": [
+            {
+                "name": "data",
+                "kind": "required",
+                "type": [
+                    "row"
+                ],
+                "purpose": "Row vector of audio samples"
+            },
+            {
+                "name": "totalSamples",
+                "kind": "required",
+                "type": [
+                    "integer"
+                ],
+                "purpose": "Number of samples in total"
+            },
+            {
+                "name": "resolution",
+                "kind": "required",
+                "type": [
+                    "integer"
+                ],
+                "purpose": "Resolution of the energy calculation (i.e. how long are the segments made from the data provided)"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "energy",
+                "kind": "required",
+                "type": [
+                    "vector"
+                ],
+                "purpose": "Vector of momentary energy values (resolution times smaller than the length of the data)"
+            }
+        ]
+    }
+}
