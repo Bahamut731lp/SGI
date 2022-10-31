@@ -27,4 +27,4 @@ time = time / metadata.SampleRate;
 plot(time, zcr);
 
 nexttile;
-spectrogram(data, hamming(256), 128, 256, metadata.SampleRate, 'yaxis');
+spectrogram(data, hamming(sampleCount), overlap, sampleCount, metadata.SampleRate, 'yaxis');
