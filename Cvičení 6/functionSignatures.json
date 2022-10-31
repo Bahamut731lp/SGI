@@ -1,0 +1,41 @@
+{
+    "_schemaVersion": "1.0.0",
+    "getZeroCrossingRate": {
+        "inputs": [
+            {
+                "name": "data",
+                "kind": "required",
+                "type": [
+                    "vector"
+                ],
+                "purpose": "Vector of signal samples"
+            },
+            {
+                "name": "resolution",
+                "kind": "required",
+                "type": [
+                    "integer"
+                ],
+                "purpose": "Number of samples per window"
+            },
+            {
+                "name": "overlap",
+                "kind": "required",
+                "type": [
+                    "integer"
+                ],
+                "purpose": "How much samplings windows overlap"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "zcr",
+                "kind": "required",
+                "type": [
+                    "vector"
+                ],
+                "purpose": "Vector of zero crossing rates"
+            }
+        ]
+    }
+}
